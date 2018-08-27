@@ -1,0 +1,4 @@
+# Ignore line length rule on lines that are only comments. (so we can avoid us rewriting all rails comments)
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ['^\s*\#.*$']

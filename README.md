@@ -10,4 +10,11 @@ Tested on ruby 2.5.1p57
 
 ## Install and run
 
-Run `bundle install` to install dependencies
+- Run `bundle install` to install dependencies
+
+- `bundle exec bin/rails s` to start the server
+
+- Navagate to http://localhost:3000
+
+## Run tests/lint
+To run linter: `bundle exec rubocop`
