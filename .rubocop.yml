@@ -1,4 +1,10 @@
 # Ignore line length rule on lines that are only comments. (so we can avoid us rewriting all rails comments)
 Metrics/LineLength:
-  Max: 80
+  Max: 160
   IgnoredPatterns: ['^\s*\#.*$']
+  Exclude: 
+    - 'db/seeds.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"

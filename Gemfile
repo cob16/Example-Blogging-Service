@@ -39,6 +39,8 @@ end
 group :development do
   gem 'rubocop', '~> 0.58.2', require: false
 
+  gem 'rspec-rails', '~> 3.7', require: false
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
