@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.form_wrapper {
+	padding: 20px;
+ 	border-bottom: 2px solid black;
+}
+ .post_item {
+ 	list-style: none;
+ 	border-bottom: 1px solid grey;
+}
+@media (min-width: 30em) {
+	.post_item {
+		padding: 20px;
+		max-width: 90%;
+	}
+}

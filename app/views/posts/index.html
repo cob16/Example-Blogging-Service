@@ -1,5 +1,16 @@
-<ul>
+
+<div class='form_wrapper' style=''>
+	<%= form_for Post.new do |form| %>
+	  <%= form.label :body %>
+	  <%= form.text_field :body, :required => true, :as => :text %>
+	  <%= form.submit %>
+	<% end %>
+</div>
+<ul class="posts">
 <% @posts.each do |p| %>
-  <li><%= p.body %> | <%= time_ago_in_words(p.created_at) %> ago</li>
+  <li class='post_item'>
+  	<p><%=simple_format(p.body).html_safe %></p>
+  	<h4><%= time_ago_in_words(p.created_at) %> ago<h4>
+  </li>
 <% end %>
 </ul>
