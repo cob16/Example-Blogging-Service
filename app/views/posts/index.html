@@ -1,9 +1,9 @@
-
+<!-- <h1>My Timeline</h3> -->
 <div class='form_wrapper' style=''>
+	<h2>New post</h3>
 	<%= form_for Post.new do |form| %>
-	  <%= form.label :body %>
-	  <%= form.text_field :body, :required => true, :as => :text %>
-	  <%= form.submit %>
+	  <p><%= form.text_area :body, :required => true, :as => :text %></p>
+	  <p><%= form.submit %></p>
 	<% end %>
 </div>
 <ul class="posts">

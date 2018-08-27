@@ -16,10 +16,31 @@ describe Post, type: :feature do
     visit '/posts'
 
     within(:css, '.new_post') do
-      fill_in('post_body', with: 'this is test post 3')
+      fill_in('post_body', with: "test post 3")
       click_button('Create Post')
     end
 
-    expect(page).to have_content 'this is test post 3'
+    within(:css, '.posts') do
+      expect(page).to have_content "test post 3"
+    end 
+  end
+
+    it 'User able to able to post a multiline message ' do
+    visit '/posts'
+
+    multiline_body = %q(
+      This is the first line.
+      of a manny line comment.
+    )
+
+    within(:css, '.new_post') do
+      fill_in('post_body', with: multiline_body)
+      click_button('Create Post')
+    end
+
+    within(:css, '.posts') do
+      #use source so that cappybarra does not normalise newlines into spaces
+      expect(source).to have_content multiline_body
+    end 
   end
 end
