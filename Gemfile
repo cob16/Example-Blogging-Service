@@ -38,6 +38,7 @@ end
 
 group :development do
   gem 'capybara', require: false
+  gem 'database_cleaner', require: false
   gem 'rspec-rails', '~> 3.7', require: false
   gem 'rubocop', '~> 0.58.2', require: false
 

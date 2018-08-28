@@ -18,7 +18,14 @@
 	padding: 20px;
  	border-bottom: 2px solid black;
 }
- .post_item {
+.error {
+	color: red
+}
+.success {
+	color: green;
+	padding: 10px;
+}
+.post_item {
  	list-style: none;
  	border-bottom: 1px solid grey;
 }

@@ -1,16 +1,20 @@
 <!-- <h1>My Timeline</h3> -->
 <div class='form_wrapper' style=''>
 	<h2>New post</h3>
-	<%= form_for Post.new do |form| %>
-	  <p><%= form.text_area :body, :required => true, :as => :text %></p>
+    <%= form_for Post.new do |form| %>
+      <p><%= form.text_area :body, :required => true, :as => :text %></p>
+	  <div class="error"><%= simple_format(@errors.join("\n")).html_safe if @errors%></div>
 	  <p><%= form.submit %></p>
 	<% end %>
+	
 </div>
+<div class="success"><%= @success %></div>
 <ul class="posts">
-<% @posts.each do |p| %>
+<% @posts.each do |post| %>
   <li class='post_item'>
-  	<p><%=simple_format(p.body).html_safe %></p>
-  	<h4><%= time_ago_in_words(p.created_at) %> ago<h4>
+  	<p><%=simple_format(post.body).html_safe %></p>
+  	<%= link_to 'Delete', post, :method => :delete, id: post.id, data: {confirm: "Are you sure you want to delete this item?"} %>
+  	<h4><%= time_ago_in_words(post.created_at) %> ago<h4>
   </li>
 <% end %>
 </ul>

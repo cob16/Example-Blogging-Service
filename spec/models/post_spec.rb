@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Post, type: :model do
-  it 'can requires text and a timestamp' do
+  it 'Requires text and a timestamp' do
     post = Post.new
     expect(post.valid?).to be false
 
@@ -13,7 +13,7 @@ describe Post, type: :model do
     expect(post.created_at).not_to be_nil
   end
 
-  it 'must be between 0 to 150 char' do
+  it 'Must be between 0 to 150 char' do
     post = Post.new
     expect(post.valid?).to be false
 
