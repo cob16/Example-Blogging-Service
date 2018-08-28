@@ -6,7 +6,9 @@ Allows a single user to manage their timeline.
 
 [The full brief can be found here](https://github.com/madetech/handbook/blob/master/guides/hiring/remote_test/brief.md)
 
-Tested on ruby 2.5.1p57
+Developed on ruby 2.5.1
+
+Also tested on 2.4.0 and 2.3.0 
 
 ## Install and run
 
