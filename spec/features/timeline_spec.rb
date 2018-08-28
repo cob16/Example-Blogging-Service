@@ -15,7 +15,7 @@ describe 'Timeline', type: :feature do
     end
   end
 
-  describe 'User able to able to post a message to the timeline' do
+  describe 'User able to post a message to the timeline' do
     it 'using the form at the top of the page' do
       visit '/posts'
 
@@ -69,7 +69,7 @@ describe 'Timeline', type: :feature do
 
       multiline_body = '
         This is the first line.
-        of a manny line comment.
+        of a many-line comment.
       '
 
       within(:css, '.new_post') do
@@ -79,7 +79,7 @@ describe 'Timeline', type: :feature do
 
       within(:css, '.posts') do
         page.assert_selector('.post_item', count: 1)
-        # use source so that cappybarra does not normalise newlines into spaces
+        # use source so that capybara does not normalise newlines into spaces
         expect(source).to have_content multiline_body
       end
     end

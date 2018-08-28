@@ -12,7 +12,7 @@ Tested on ruby 2.5.1p57
 
 - Run `bundle install` to install dependencies
 
-- Run migrations `bin/rake db:migrate RAILS_ENV=test`
+- Run migrations `bin/rake db:migrate`
 
 - `bundle exec bin/rails s` to start the server
 
