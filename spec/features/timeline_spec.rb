@@ -32,7 +32,7 @@ describe 'Timeline', type: :feature do
       end
     end
 
-    describe 'recive valadation errors messages' do
+    describe 'unsuccessful submission get valadation errors messages' do
       it 'if only whitespace' do
         visit '/posts'
 

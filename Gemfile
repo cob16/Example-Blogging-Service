@@ -41,6 +41,7 @@ group :development do
   gem 'database_cleaner', require: false
   gem 'rspec-rails', '~> 3.7', require: false
   gem 'rubocop', '~> 0.58.2', require: false
+  gem 'shoulda-matchers', '~> 3.1', require: false
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
